@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 910 340" width="910" height="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'PingFang TC', 'Noto Sans TC', sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+
+  <!-- 卡片底:固定淺色,GitHub 深色模式下也讀得清楚 -->
+  <rect x="1" y="1" width="908" height="338" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+
+  <!-- ── 捕捉端 ── -->
+  <text x="30" y="32" font-size="11" font-weight="600" letter-spacing="1.2" fill="#57606a">CAPTURE · IPHONE · NO JUDGMENT</text>
+
+  <rect x="30" y="44" width="220" height="60" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="46" y="68" font-size="13" font-weight="600" fill="#1f2328">"Hey Siri, 排一件事"</text>
+  <text x="46" y="88" font-size="12" fill="#57606a">明天下午三點跟教授meeting</text>
+
+  <rect x="290" y="44" width="220" height="60" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="306" y="68" font-size="13" font-weight="600" fill="#1f2328">Shortcut appends one line</text>
+  <text x="306" y="88" font-size="12" fill="#57606a">capture timestamp + raw words</text>
+
+  <rect x="550" y="44" width="220" height="60" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="566" y="68" font-size="13" font-weight="600" fill="#1f2328">cal_inbox.txt</text>
+  <text x="566" y="88" font-size="12" fill="#57606a">plain text in iCloud Drive</text>
+
+  <line x1="250" y1="74" x2="286" y2="74" stroke="#57606a" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="510" y1="74" x2="546" y2="74" stroke="#57606a" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 捕捉 → 消化 -->
+  <path d="M660,104 V132 H125 V162" fill="none" stroke="#57606a" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="400" y="126" font-size="11" fill="#57606a" text-anchor="middle">iCloud syncs the file; the change itself is the trigger</text>
+
+  <!-- ── 消化端 ── -->
+
+  <rect x="30" y="166" width="190" height="60" rx="8" fill="#eef4ff" stroke="#9ab6e6"/>
+  <text x="46" y="190" font-size="13" font-weight="600" fill="#1f2328">launchd WatchPaths</text>
+  <text x="46" y="210" font-size="12" fill="#57606a">no polling, idle is free</text>
+
+  <rect x="255" y="166" width="190" height="60" rx="8" fill="#eef4ff" stroke="#9ab6e6"/>
+  <text x="271" y="190" font-size="13" font-weight="600" fill="#1f2328">consume_inbox.sh</text>
+  <text x="271" y="210" font-size="12" fill="#57606a">stat only; empty means stop</text>
+
+  <rect x="480" y="166" width="190" height="60" rx="8" fill="#fff4e5" stroke="#e0a458" stroke-width="1.5"/>
+  <text x="496" y="190" font-size="13" font-weight="600" fill="#1f2328">claude -p + CLAUDE.md</text>
+  <text x="496" y="210" font-size="12" fill="#57606a">every judgment call</text>
+
+  <rect x="705" y="166" width="180" height="60" rx="8" fill="#eef4ff" stroke="#9ab6e6"/>
+  <text x="721" y="190" font-size="13" font-weight="600" fill="#1f2328">create_event.py</text>
+  <text x="721" y="210" font-size="12" fill="#57606a">add-only → Calendar</text>
+
+  <rect x="705" y="256" width="180" height="60" rx="8" fill="#ffffff" stroke="#9aa4ae" stroke-dasharray="5 4"/>
+  <text x="721" y="280" font-size="13" font-weight="600" fill="#1f2328">data/pending.md</text>
+  <text x="721" y="300" font-size="12" fill="#57606a">unclear lines wait for me</text>
+
+  <line x1="220" y1="196" x2="251" y2="196" stroke="#57606a" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="445" y1="196" x2="476" y2="196" stroke="#57606a" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="670" y1="196" x2="701" y2="196" stroke="#57606a" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M575,226 V286 H701" fill="none" stroke="#9aa4ae" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <text x="590" y="278" font-size="11" fill="#57606a">not sure</text>
+
+  <text x="145" y="155" font-size="11" font-weight="600" letter-spacing="1.2" fill="#57606a">DIGEST · MAC · ALL THE JUDGMENT</text>
+  <text x="30" y="266" font-size="12" fill="#57606a">"明天" resolves against the capture</text>
+  <text x="30" y="284" font-size="12" fill="#57606a">timestamp, not the clock at digest time.</text>
+</svg>

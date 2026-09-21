@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.sean.calagent</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/sean/Projects/CalAgent/scripts/consume_inbox.sh</string>
+  </array>
+
+  <!-- 收件匣一被 iCloud 同步寫入就觸發,不是輪詢 -->
+  <key>WatchPaths</key>
+  <array>
+    <string>/Users/sean/Library/Mobile Documents/iCloud~is~workflow~my~workflows/Documents/cal_inbox.txt</string>
+  </array>
+
+  <!-- 保險:iCloud 偶爾不觸發檔案事件,每 30 分補檢查一次。
+       沒有新行時 consume_inbox.sh 會立刻退出,不會呼叫 Claude,所以這道保險幾乎免費。 -->
+  <key>StartInterval</key>
+  <integer>1800</integer>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>/Users/sean/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/Users/sean/Projects/CalAgent/data/launchd.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/sean/Projects/CalAgent/data/launchd.err.log</string>
+
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>

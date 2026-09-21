@@ -1,0 +1,25 @@
+# ─── 私人行程資料,絕不進版控 ───
+# data/ 採「預設全擋、白名單放行」:
+# 日後在 data/ 新增任何執行期檔案(log、pending、archive),
+# 都不會因為忘了加規則而不小心被 commit。
+data/*
+!data/*.example.csv
+!data/*.example.md
+
+# 執行期產物
+.consume.lock/
+__pycache__/
+*.pyc
+.venv/
+
+# 備份檔
+*.bak-*
+
+# 系統雜檔
+.DS_Store
+
+# 給其他 agent CLI 用的本機副本,內容與 CLAUDE.md 相同
+AGENTS.md
+
+# Claude Code 本機設定
+.claude/settings.local.json
